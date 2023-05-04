@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+    <link rel="icon" href="./Imgs/Travasure_icon.png">
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
 <body>
   <header>
     <nav>    
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" id="bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
-       <div style="width: 20%;">
-        <img src="./Imgs/logo.png" alt="" style="width: 100%;margin: auto;
+       <div style="width: 20%;"
+       class="logo_img">
+        <img src="./Imgs/Travasure_white_with_logo_Transparent.png" alt="" style="width: 100%;margin: auto;
         display: block;">
     </div>
-      <div class="options"> <ul>
+      <div class="options" id="option"><ul>
         <li><a href="#">Download App</a></li>
         <li><a href="#">Parter With Us</a></li>
         <li><a href="#">Holidays</a></li>
@@ -42,26 +43,80 @@
 
           <div class="search_box">
              <div class="card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
               <input type="text" name="destination" placeholder="Destination" id="location">
              </div>   
-             <div style="border: 0.5px solid; height: 70%;"></div>
+             <div style="border: 0.5px solid; height: 70%;border-color: rgb(155, 155, 155);"></div>
              <div class="card">
               <input type="date" placeholder="date" id="date">
              </div>
-             <div style="border: 0.5px solid; height: 70%;"></div>
+             <div style="border: 0.5px solid; height: 70%; border-color: rgb(155, 155, 155);"></div>
              <div class="card">
-              <input type="number" name="guests" id="guests">
+              <input type="number" name="guests" id="guests" placeholder="Add guest">
              </div>
-             <div style="border: 0.5px solid; height: 70%;"></div>
+             <div style="border: 0.5px solid; height: 70%;border-color: rgb(155, 155, 155);"></div>
              <div class="card" style="display: flex;
              justify-content: end; background-color: rgb(37, 188, 248);">
-              <img src="./Imgs/search-explore-white-icon-transparent-png-31634946340qymsafkpk6-removebg-preview.png" alt="" style="width: 60px;">
+              <img src="./Imgs/search-explore-white-icon-transparent-png-31634946340qymsafkpk6-removebg-preview.png" alt="" id="search_icon">
              </div>
           </div>
   </div>
     </div>
    
   </header>
+  <product>
+    <h1>Guides for your next vacation</h1>
+    <p>Check out this week's selection of popular poducts that might catch eye and don't</p>
+    <nav>
+      <div class="btn">All</div>
+      <div class="btn">Trending</div>
+      <div class="btn">Popular</div>
+      <div class="btn">Features</div>
+      <div class="btn">Recommend</div>
+      <div class="btn">Tour Packages</div>
+    </nav>
+    <main>
+      <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmY24Jv-akVnq4r-nuDQIG-dXgqpRqYoE_MUGAoUlH6A&usqp=CAU&ec=48665698" alt="">
+       <div> <span>see</span> <span>see</span></div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... <a href="#">Read more</a></p>
+      </div>
+      <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmY24Jv-akVnq4r-nuDQIG-dXgqpRqYoE_MUGAoUlH6A&usqp=CAU&ec=48665698" alt="">
+        <div> <span>see</span> <span>see</span></div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... <a href="#">Read more</a></p>
+      </div>
+      <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmY24Jv-akVnq4r-nuDQIG-dXgqpRqYoE_MUGAoUlH6A&usqp=CAU&ec=48665698" alt="">
+        <div> <span>see</span> <span>see</span></div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... <a href="#">Read more</a></p>
+      </div>
+      <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmY24Jv-akVnq4r-nuDQIG-dXgqpRqYoE_MUGAoUlH6A&usqp=CAU&ec=48665698" alt="">
+        <div> <span>see</span> <span>see</span></div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... <a href="#">Read more</a></p>
+      </div>
+      <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmY24Jv-akVnq4r-nuDQIG-dXgqpRqYoE_MUGAoUlH6A&usqp=CAU&ec=48665698" alt="">
+        <div> <span>see</span> <span>see</span></div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... <a href="#">Read more</a></p>
+      </div>
+      <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmY24Jv-akVnq4r-nuDQIG-dXgqpRqYoE_MUGAoUlH6A&usqp=CAU&ec=48665698" alt="">
+         <div> <span>see</span> <span>see</span></div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... <a href="#">Read more</a></p>
+      </div>
+    </main>
+    
+  </product>
 </body>
 </html>
 <script src="./Script/index.js"></script>
