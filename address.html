@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travasure - Travel around the world</title>
+    <link rel="icon" href="images/icon.png">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/address.css">
+
+</head>
+<body>
+<img src="images/logo2.png" alt="">
+
+<div class="popup1" id="popup1">
+    <img src="images/cross.png" alt="">
+    <h2>Sorry</h2>
+    <p>Some fields are empty <br>
+        please fill all the fields <br>
+        and try again</p>
+    <!-- <button type="button" id="okbtn" onclick="closepopup1()">OK</button> -->
+    <a href="address.html" onclick="closepopup1()">OK</a>
+</div>
+
+<div class="container" id="seccont">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox" >
+                    <span>full name :</span>
+                    <input id="ibname" type="text" placeholder="enthusiast traveller">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input  id="ibemail" type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox" >
+                    <span>address :</span>
+                    <input id="ibadd" type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox" >
+                    <span>city :</span>
+                    <input id="ibcity" type="text" placeholder="Kolkata">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="india">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="mr. enthusiast buyer">
+                </div>
+                <div class="inputBox">
+                    <span>credit / Debit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div> -->
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+
+
+        <!-- <a href="payment.html">SAVE ADDRESS AND PAY</a> -->
+    </form>
+
+</div>    
+    
+</body>
+
+<script>
+let container=document.getElementById("seccont")
+
+let form=document.querySelector("form")
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        if(form.ibname.value===""&&form.ibemail.value===""&&form.ibadd.value===""&&form.ibcity.value===""){
+            console.log("somthing wrong")
+            container.innerHTML=null
+            popup1.classList.add("openpopup1")
+        }
+        else{
+            console.log("done");
+            // openpopup()
+            // container.innerHTML=null
+           window.location.assign("./payment.html")
+        }
+    })
+
+
+    // function closepopup1(){
+    //     // popup1.classList.remove("openpopup1")
+    //     // window.location.reload()
+    //     // window.location.assign("./payment.html")
+    // }
+
+</script>
+</html>
