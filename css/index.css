@@ -540,14 +540,13 @@ product main .cards p a
 
 #main .cards
 {
+   
     margin-top: 80px; 
-   display: grid;
-   grid-template-columns: 40% 40%;
+   display: flex;
    gap: 200px;
 }
 #main .cards h1
 {
-    line-height: 100px;
     font-weight: 500;
 }
 #main .cards p
@@ -561,10 +560,10 @@ margin-top: 80px;
    display: flex;
    flex-direction: row-reverse;
    gap: 200px;
+   
 }
 #main .cards2 h1
 {
-    line-height: 100px;
     font-weight: 500;
 }
 #main .cards2 p
@@ -590,8 +589,24 @@ margin-top: 80px;
 #main .images
 {
     width: 100%;
+ 
 }
 #main img
 {
    width:100%;
+}
+
+/* ==================Media===================== */
+
+
+@media only screen and (max-width: 1070px)
+{
+#main .cards
+{
+    flex-direction: column;
+}
+#main .cards2
+{
+    flex-direction: column;
+}
 }
