@@ -86,12 +86,12 @@
             height: auto;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 0px 0px 10px rgb(109, 92, 238);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             justify-content: center;
             top: -100%;
             left: 5px;
             z-index: 20;
-            margin-top: 50px;
+            margin-top: 70px;
             padding: 10px 20px;
             backdrop-filter: blur(15px);
             transition: 1s linear;
@@ -118,6 +118,46 @@
 
      /* =========================== - Nav End - ================================ */
 
+     #Destination-Data {
+        width: 90%;
+        margin: auto;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 10px;
+        margin-top: 40px;
+    }
+    #Destination-Data > div > img {
+        width: 100%;
+        height: 230px;
+        margin: auto;
+    }
+    #Destination-Data > div {
+        padding: 12px;
+        transition: transform 0.4s;
+    }
+    #Destination-Data > div:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transform: scale(1.05);
+    }
+    #Destination-Data > div > button {
+        margin: auto;
+        border: none;
+        display: block;
+        padding: 10px 30px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        border: 2px solid rgb(205, 205, 205);
+        cursor: pointer;
+    }
+    #Destination-Data > div > button:hover{
+        background-color: #006ce4;
+        /* background-color: #003b95; */
+        color: #fff;
+        border: 2px solid white;
+    }
+
     </style>
 </head>
 <body>
@@ -125,23 +165,36 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" id="bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
-        <div style="width: 20%;" class="logo_img"> 
-            <img src="./Imgs/Travasure_black_Transparent.png" alt="err" style="width: 100%;margin: auto; display: block;">
+        <div style="width: 20%;" class="logo_img">
+            <a href="./index.html"><img src="./Imgs/Travasure_black_Transparent.png" alt="err" style="width: 100%;margin: auto; display: block;"></a> 
         </div>
         <div class="options" id="option">
             <ul>
                 <li><a href="#">Download App</a></li>
                 <li><a href="#">Parter With Us</a></li>
-                <li><a href="#">Holidays</a></li>
                 <li><a href="#">Installment</a></li>
                 <li><a href="#">Saved</a></li>
+                <li><a href="./Destination.html">Holidays</a></li>
                 <li><a href="#">My Bookings</a></li>
             </ul>
         </div>
-        <div  class="Resister">
+        <div class="Resister">
             <a href="#">Resister</a></li>
         </div>
-      </nav>
+    </nav>
     
+    <div id="Destination-Data">
+        <!-- Append data here -->
+    </div>
 </body>
+
+<script>
+    let menu_btn = document.getElementsByClassName("bi-list")[0];
+    let options = document.getElementById("option")
+    menu_btn.addEventListener("click",() =>{
+         options.classList.toggle("active");
+    })
+</script>
+<script src="./Script/Destination.js"></script>
+
 </html>
