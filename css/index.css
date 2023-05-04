@@ -2,10 +2,6 @@
         * {
             font-family: "Poppins", sans-serif;
         }
-html
-{
-    scroll-behavior: smooth;
-}
 *{
     padding: 0;
     margin: 0;
@@ -461,4 +457,141 @@ product main .cards p a
     text-decoration: none;
     color: rgb(31, 23, 236);
     font-weight: 500;
+}
+
+/* ////////////////media///////////////////// */
+
+@media only screen and (max-width: 1070px)
+{
+    product  main
+    {
+        grid-template-columns:repeat(2,40%);
+       justify-content: space-evenly;
+        
+    }
+    product  h1
+    {
+       font-size: 35px;
+    }
+    
+    product >p
+    { 
+       
+       font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 900px)
+{
+    product >nav
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 30px;
+        transition: transform 0.2s
+    }
+    product nav .btn
+    {
+        border: 2px solid rgb(205, 205, 205);
+        font-size: 15px;
+        padding: 10px 10px;
+        border-radius:50px;
+        color: rgb(159, 158, 158);
+    }
+}
+@media only screen and (max-width: 700px)
+{
+    product  main
+    {
+        grid-template-columns:repeat(1,80%);
+      margin: auto;
+        
+    }
+    product nav .btn
+    {
+        
+        font-size: 12px;
+      
+    }
+    product  h1
+    {
+       font-size: 32px;
+    }
+    
+    product >p
+    { 
+       
+       font-size: 12px;
+    }
+}
+
+
+
+/* //////////////////main////////////////////// */
+
+#main
+{
+   margin-top: 40px;
+   padding:90px;
+}
+
+#main .cards
+{
+    margin-top: 80px; 
+   display: grid;
+   grid-template-columns: 40% 40%;
+   gap: 200px;
+}
+#main .cards h1
+{
+    line-height: 100px;
+    font-weight: 500;
+}
+#main .cards p
+{
+   margin-bottom: 20px;
+   color: rgb(144, 144, 144);
+}
+#main .cards2
+{
+margin-top: 80px; 
+   display: flex;
+   flex-direction: row-reverse;
+   gap: 200px;
+}
+#main .cards2 h1
+{
+    line-height: 100px;
+    font-weight: 500;
+}
+#main .cards2 p
+{
+   margin-bottom: 20px;
+   color: rgb(144, 144, 144);
+}
+#main .about div
+{  position: relative;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 30px;
+    color: white;
+    background-color: blue;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+}
+#main .about div:hover
+{ 
+    
+    transform: scale(1.07);
+}
+#main .images
+{
+    width: 100%;
+}
+#main img
+{
+   width:100%;
 }
