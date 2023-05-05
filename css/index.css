@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-        * {
-            font-family: "Poppins", sans-serif;
-        }
+
+html
+{
+    scroll-behavior: smooth;
+}
 *{
+    font-family: "Poppins", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -67,10 +70,9 @@ header a
 { 
 
    text-decoration: none;
-   color: #121213;
    font-size: 15px;
    font-weight: 500;
-   transition:  2s linear;
+   transition:  1s linear;
    color: white;
 } 
 header nav a:hover
@@ -416,7 +418,7 @@ product nav .btn
 }
 product nav .btn:hover
 {
-    background-color: blue;
+    background-color: #006ce4;
     color: #fff;
     border: 2px solid white;
 }
@@ -544,6 +546,7 @@ product main .cards p a
     margin-top: 80px; 
    display: flex;
    gap: 200px;
+   align-items: center;
 }
 #main .cards h1
 {
@@ -560,6 +563,7 @@ margin-top: 80px;
    display: flex;
    flex-direction: row-reverse;
    gap: 200px;
+   align-items: center;
    
 }
 #main .cards2 h1
@@ -577,7 +581,7 @@ margin-top: 80px;
     padding: 15px;
     border-radius: 30px;
     color: white;
-    background-color: blue;
+    background-color: #006ce4;
     z-index: 1;
     transition: transform 0.2s ease-in-out;
 }
@@ -589,11 +593,12 @@ margin-top: 80px;
 #main .images
 {
     width: 100%;
+
  
 }
 #main img
 {
-   width:100%;
+   width:80%;
 }
 
 /* ==================Media===================== */
@@ -614,6 +619,142 @@ margin-top: 80px;
 }
 
 
+
+
+
+
+/* ////////////Reviews/////////////////// */
+
+.reviews h1
+{
+    text-align: center;
+}
+.revCards
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    padding: 85px;
+    gap: 80px;
+    
+}
+.revCards  .top
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.revCards .star 
+{
+   margin-left: auto;
+   font-weight: 600;
+}
+.revCards hr
+{
+    margin-bottom: 20px;
+}
+.revCards  .top img
+{
+    width: 80px;
+    margin-right: 10px;
+}
+
+.revCards h3
+{
+    font-weight: 500;
+}
+.revCards p
+{
+    color: rgb(158, 157, 157);
+}
+ 
+
+
+/* /////////Media/////////////////////// */
+@media only screen and (max-width: 1100px)
+{
+    .revCards
+    {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        padding: 85px;
+        gap: 80px;
+        
+    }
+}
+@media only screen and (max-width: 700px)
+{
+    .revCards
+    {
+        display: flex;
+        padding: 85px;
+        
+    }
+}
+
+
+
+
+/* /////////////////////////////////////////// */
+
+.download 
+{
+    text-align: center;
+    margin: 20px 80px 100px 80px;
+}
+.download h1
+{
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.download p
+{
+    margin: auto;
+    width: 50%;
+    color: rgb(142, 138, 138);
+
+}
+
+.download .icon
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    
+}
+
+.download .icon div
+{
+    margin-top: 20px;
+    width: 14%;
+}
+.download .icon img
+{
+    width: 100%;
+    border-radius: 40px;
+}
+/* ////////Meida///////////////////////// */
+@media only screen and (max-width: 1100px)
+{
+    .revCards
+    {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        padding: 85px;
+        gap: 80px;
+        
+    }
+}
+@media only screen and (max-width: 700px)
+{
+    .download p
+    {
+        display:none;
+    }
+    .download .icon div
+    {
+        width: 30%;
+    }
+}
 
 
 /* .///////////////////Footer///////////////// */
