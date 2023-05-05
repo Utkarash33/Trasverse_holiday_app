@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Imgs/Travasure_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Travasure - Travel around the world</title>
     <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -35,7 +36,7 @@
         display: flex;
     }
     nav ul li{ 
-        padding:  3px 15px;
+        padding:  3px 18px;
     }
     .Resister a{     
         background-color: black;
@@ -49,7 +50,7 @@
     a{ 
         text-decoration: none;
         color: #121213;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 500;
         transition:  3s linear;
     } 
@@ -116,23 +117,87 @@
         }
     }
 
-     /* =========================== - Nav End - ================================ */
+    /* =========================== - Nav End - ================================ */
 
-     #Destination-Data {
-        width: 90%;
+    body::-webkit-scrollbar {
+         display: none;
+    }
+    .Categories {
+        width: 95%;
         margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    .Categories > button {
+        border: none;
+        margin: 15px 5px 15px 12px;
+        padding: 5px 14px;
+        border: 1px solid rgb(161, 160, 160);
+        cursor: pointer;
+        background-color: var(--grey-d);
+        border-radius: 50px;        
+        transition: 0.2s ease-in-out;
+    }
+    .Categories > button:hover {
+        transform: scale(1.05);
+    }
+    .Categories {
+        white-space: nowrap;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none; /* Firefox */
+    }
+    .Categories::-webkit-scrollbar {
+        display: none;
+    }
+    
+
+
+    /* ===================================== - Left Side Div - ==================================== */
+
+    #Destination-body{
+         /* background-color: #EEEEEE; */
+         display: flex;
+         margin-top: 10px;
+    }
+
+    #Destination-Data {
+        height: calc(100vh - 70px);
+        width: 22%;
+        position: relative;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    #Destination-Data::-webkit-scrollbar {
+        display: none;
+    }
+     #Destination-Data {
         box-sizing: border-box;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-        padding: 10px;
-        margin-top: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        padding: 30px;
+        text-align: center;
     }
     #Destination-Data > div > img {
         width: 100%;
-        height: 230px;
+        height: 150px;
         margin: auto;
+        border-radius: 10px;
     }
+    #Destination-Data > div > img:hover{
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+    }
+    /* #Destination-Data h4 {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000
+    } */
+   
     #Destination-Data > div {
         padding: 12px;
         transition: transform 0.4s;
@@ -140,16 +205,20 @@
     #Destination-Data > div:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         transform: scale(1.05);
+        border-radius: 10px;
     }
     #Destination-Data > div > button {
         margin: auto;
         border: none;
         display: block;
-        padding: 10px 30px;
+        padding: 10px 20px;
+        margin-top: 10px;
         margin-bottom: 10px;
-        border-radius: 50px;
+        border-radius: 40px;
         border: 2px solid rgb(205, 205, 205);
         cursor: pointer;
+        /* background-color: #0071C2;
+        background-color: #003580; */
     }
     #Destination-Data > div > button:hover{
         background-color: #006ce4;
@@ -158,6 +227,160 @@
         border: 2px solid white;
     }
 
+    /* ===================================== - Right Side Div - ==================================== */
+
+    #Destination-Data22 {
+        height: calc(100vh - 70px);
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 40px 30px 30px 30px;
+    }
+    #Destination-Data22::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+    }
+    #Destination-Data22::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 500px;
+        margin-right: 20px;
+        border: 5px solid red;
+    }
+    #Destination-Data22::-webkit-scrollbar-track {
+        background-color: #9e9e9eb2;
+    }
+    #Destination-Data22 {
+        width: 80%;
+        padding: 10px;
+    }
+    #Destination-Data22>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .searchIcon {
+        display: flex;
+        border-radius: 3px;
+        align-items: center;
+        border: 0.5px solid gray;
+        padding: 10px;
+        padding-right: 40px;
+    }
+    #search2 {
+        width: 100%;
+        border: none;
+        outline: 0;
+        font-size: 14px;
+    }
+    #filter {
+        padding: 10px 0px;
+        padding-left: 10px;
+        border-radius: 3px;
+        border: 0.1px solid gray;
+    }
+    #select-tag {
+        border: none;
+    }
+
+    /* ============================ - Footer - ====================================== */
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        background-color: #006ce4;
+        color: white;
+    }
+    footer .top{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 80px;
+    }
+    footer .top .logo{
+        width:30%;
+    }
+    footer .top .logo img{
+        width:75%;
+        margin-bottom: 18px;
+    }
+    footer .top .logo p{
+        line-height: 30px;
+        padding-left:15px;
+    }
+    footer .top .about{
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        gap: 80px;
+    }
+    footer .top .about h2{
+        margin-bottom: 15px;
+    }
+    footer .top .about ul {
+        list-style: none;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    footer .bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 80px;
+        padding-bottom: 40px;
+    }
+    footer hr{
+        width: 90%;
+        margin: auto;
+    }
+
+    /* ========================== - Footer Media - =================================== */
+
+    @media only screen and (max-width: 900px){
+        footer .top p{
+            display: none;
+        }
+        footer .top .logo{
+            width:30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer .top .logo img{
+            width:100%;
+            margin: auto;  
+        }
+        footer .top .about{
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+            gap: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 700px){
+        footer .top .logo {
+            display: none;
+        }
+        footer .top .about {
+            flex-direction: column;
+            margin: auto;
+            text-align: center;
+        }
+        footer .top .about ul {
+            font-size: 16px;
+        }
+        footer .top .about{
+            gap: 20px;
+        }
+        footer .bottom{
+            flex-direction: column;
+        }
+    }
+
+    /* ============================ - Footer End - ====================================== */
+
+    
+
+
+/* ====================================================================================================== */
+
     </style>
 </head>
 <body>
@@ -165,7 +388,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" id="bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
-        <div style="width: 20%;" class="logo_img">
+        <div style="width: 15%;" class="logo_img">
             <a href="./index.html"><img src="./Imgs/Travasure_black_Transparent.png" alt="err" style="width: 100%;margin: auto; display: block;"></a> 
         </div>
         <div class="options" id="option">
@@ -182,10 +405,98 @@
             <a href="#">Resister</a></li>
         </div>
     </nav>
-    
-    <div id="Destination-Data">
-        <!-- Append data here -->
+
+    <!-- ======================================================================================= -->
+
+    <div class="Categories">
+        <p><i class="fa-solid fa-arrow-trend-up"></i> Trending searches: </p>
+        <button id="trend">All</button>
+        <button id="Beach">Beach</button>
+        <button id="Hills">Hills</button>
+        <button id="Temple">Temple</button>
+        <button id="Desert">Desert</button>
+        <button id="Lake">Lake</button>
+        <button id="Fort">Fort</button>
+        <button id="Mountain Snawfall">Mountain Snawfall</button>
+        <button id="Mountain">Mountain</button>
+        <button id="Mountain Climbing">Mountain Climbing</button>
+        <button id="Dam">Dam</button>
+        <button id="Museum">Museum</button>
     </div>
+    <hr>
+
+    <!-- ========================================================================================== -->
+
+    <div id="Destination-body">
+        <div id="Destination-Data">
+            <!-- Append data here -->
+        </div>
+        <hr>
+        <div id="Destination-Data22">
+            <div>
+                <h2>Destination</h2>
+                <form class="searchIcon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input placeholder="Search within category" type="text" id="search2">
+                </form>
+                <div id="filter">
+                    <span>Sort by :</span>
+                    <select name="" id="select-tag">
+                        <option value=""></option>
+                        <option value="Price Low To High">Price Low To High</option>
+                        <option value="Price High To Low">Price High To Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================================================== -->
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <div> 
+                    <img src="./Imgs/Travasure_white_Transparent.png" alt="err">
+                </div>
+                <div> 
+                    <p>Convenience is our prority to satisfy our customers, and we provide all the features you can easily and quickly.</p>
+                </div>
+           </div>
+           <div class="about">
+                <div>
+                    <h2>About</h2>
+                    <ul>
+                        <li>How to Book</li>
+                        <li>Contact Us</li>
+                        <li>Help Center</li>
+                    </ul>
+                </div>
+                <div> 
+                    <h2>Products</h2>
+                    <ul>
+                        <li>destination</li>
+                        <li>Flight</li>
+                        <li>Lodging</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Social</h2>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div>Privacy Policy</div>
+            <div>Cpoyright © 2023 Travasure</div>
+        </div>
+    </footer>
 </body>
 
 <script>

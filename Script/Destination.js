@@ -17,17 +17,17 @@ function Display(data){
     Container.innerHTML = "";
     data.forEach((element) => {
         let card = document.createElement("div");
-        let location = document.createElement("h2");
+        let location = document.createElement("h4");
+        let location2 = document.createElement("h4");
         let image = document.createElement("img");
-        let capital = document.createElement("p");
         let visit = document.createElement("button");
 
-        visit.textContent = "Select Tourist";
+        visit.textContent = "Select Destination";
         location.textContent = element.name;
+        location2.textContent = element.location;
         image.src = element.img;
-        capital.textContent = element.capital;
 
-        card.append(image,location,capital,visit);
+        card.append(image,location2,location);
         Container.append(card);
     });
 }
