@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travasure - Travel around the World</title>
+    <link rel="stylesheet" href="./css/adminProductPage.css" />
+</head>
+<body>
+    <!-- navbar part -->
+    <nav id="navbar">
+        <div id="logo-img">
+            <img src="./Imgs/Travasure_white_with_logo_Transparent.png" alt="logo">
+        </div>
+        <div id="link">
+            <a href="./adminHome.html">Home</a>
+            <a href="./adminAddProduct.html">Add Product</a>
+            <a href="./adminProductPage.html">Product</a>
+        </div>
+    </nav>
+    
+    <!-- product part -->
+    <div class="container">
+        <!-- <div class="sub-container"> -->
+            <!-- side bar -->
+            <div class="column" id="sidebar-one">
+                <div class="" id="postData">
+                    <h4>Add Data</h4>
+                    <form action="" id="product_form">
+                        <label for="location">Location:</label><br>
+                        <select id="location">
+                            <option value="">Choose Location</option>
+                            <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                        </select><br>
+                        <br>
+                        <label for="name">Place Name:</label><br>
+                        <input type="text" name="name" id="name" class="form_class"><br>
+                        <br>
+                        <label for="information">Information about Place:</label><br>
+                        <input type="text" name="information" id="info" class="form_class"><br>
+                        <br>
+                        <label for="image">Image of place:</label><br>
+                        <input type="url" name="image" id="image" class="form_class"><br>
+                        <br>
+                        <label for="price">Price:</label><br>
+                        <input for="number" id="price" class="form_class"><br>
+                        <br>
+                        <label for="package">Package:</label><br>
+                        <input type="text" name="package" id="package" class="form_class" placeholder="0 Nights / 0 Days"><br>
+                        <br>
+                        <label for="catogary">Category:</label><br>
+                        <input type="text" name="catogary" id="catogary" class="form_class"><br>
+                        <br>
+                        <button type="submit" id="submit">Submit</button><br>
+                    </form>
+                </div>
+            </div>
+            <!-- product bar -->
+            <div class="column" id="sidebar-two">
+            
+            <!-- </div> -->
+
+        </div>
+    </div>
+    
+</body>
+
+<script src="./Script/adminProductPage.js"></script>
+</html>
