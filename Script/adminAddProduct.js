@@ -1,12 +1,5 @@
+let loc = document.getElementById("location");
 
-let id = '';
-let location = document.getElementById("location");
-
-let information = document.getElementById("information").value;
-let image = document.getElementById("image").value;
-let price = document.getElementById("price").value;
-let package = document.getElementById("package").value;
-let catogary = document.getElementById("catogary").value;
 
 
 
@@ -22,34 +15,59 @@ function CreateObject(name, information, image, price, package, catogary){
 let form = document.getElementById("product_form");
 form.addEventListener("submit", (e)=>
 {
-    let name = document.getElementById("name").value;
+    
     e.preventDefault();
-     console.log("hiii")
-    let obj = new CreateObject(name, information, image, price, package, catogary);
+    //let obj = new CreateObject(name, information, image, price, package, catogary);
 
-    //postDataToAPI(obj);
+    postDataToAPI();
     
 })
-//postDataToAPI()
-// function postDataToAPI(obj){
-//     //e.preventDefault();
-    
-//     fetch(`https://frail-show.onrender.com/data`)
-//     .then(res => res.json())
-//     .then((data) => {
-//         console.log(data)
+function postDataToAPI(){
+    //e.preventDefault();
+    let id;
+    fetch(`https://frail-show.onrender.com/data`)
+    .then(res => res.json())
+    .then((data) => {
           
-//         data.forEach(element => {
-//             console.log(element)
-//             if(element.name == location.value){
-//                 //element.tourist.push(obj);
-//                 id=element.id;
-//                 console.log(id);
-//             }
-//         });
+        data.forEach(element => {
+            if(element.name == loc.value || element.location == loc.value){
+                addLoc(element.id)
+            }
+        });
         
-//     })
-// }
-
-
-
+    })
+    
+}
+function addLoc(id)
+{
+    fetch(`https://frail-show.onrender.com/data/${id}`)
+    .then(response => response.json())
+    .then(data => {
+        let name = document.getElementById("name").value;
+        let information = document.getElementById("info").value;
+        let image = document.getElementById("image").value;
+        let price = document.getElementById("price").value;
+        let package = document.getElementById("package").value;
+        let catogary = document.getElementById("catogary").value;
+      const newTourist = new CreateObject(name, information, image, price, package, catogary);
+      data.tourist.push(newTourist);
+      //console.log(data.tourist)
+      fetch(`https://frail-show.onrender.com/data/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(result => {
+          console.log(result.tourist);
+        })
+        .catch(error => {
+          console.error( error);
+        });
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}

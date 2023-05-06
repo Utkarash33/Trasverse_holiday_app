@@ -49,17 +49,24 @@ nav a:hover {
 
 /* table data */
 
-#table {
+/* #table {
     margin: auto;
     width: 100%;
     text-align: center;
     border-collapse: collapse;
     border: 1px solid red;
+} */
+
+table {
+    border: 1px solid black;
+    margin: auto;
+    width: 100%;
 }
 
 th, td {
+    border: 1px solid red;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 th {
@@ -69,4 +76,5 @@ th {
 
 td {
     height: 50px;
+    text-align: center;
 }
