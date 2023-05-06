@@ -22,11 +22,12 @@ header
     margin: auto;
 }
 header{
-    background-image: url("https://assets.unenvironment.org/decadeonrestoration/2020-03/rough-horn-2146181_1280.jpg");
     background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-}
-
+ background: blur(2px);
+  
+} 
+  
 /* Nav Bar //////////////////////////////////////////////////// */
 
 
@@ -73,7 +74,7 @@ header a
    font-size: 15px;
    font-weight: 500;
    transition:  1s linear;
-   color: white;
+   color: rgb(255, 255, 255);
 } 
 header nav a:hover
 { 
@@ -437,7 +438,8 @@ product .cards
 product main .cards img
 {
     display: block;
-    width: 100%;
+    width:100%;
+    height: 300px;
     margin: auto;
     border-radius: 25px;
 }
