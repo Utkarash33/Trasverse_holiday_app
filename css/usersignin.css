@@ -16,15 +16,18 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(90deg, #B0DAFF 65%, #19A7CE 35.1%);
+    background: linear-gradient(90deg, white 65%, #003B95 35.1%);
+    /* background-color:#D8E9F0; */
 }
 
 .backimage {
-    height: 80vh;
+    height: auto;
     width: 80%;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     position: absolute;
-    border-radius: 18px;
+    border-radius: 20px;
+    background-color:#2E79BA ;
+    /* background: linear-gradient(90deg,  #003B95 15%,white 65%); */
 }
 
 .backimage #backimage {
@@ -33,7 +36,7 @@
     position: absolute;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     filter: blur(2px);
-    border-radius: 18px;
+    border-radius: 20px;
 }
 
 #bottom {
@@ -44,6 +47,12 @@
     position: relative;
     width: 50%;
 }
+#leftdiv img{
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+   filter: blur(2px);
+}
 
 #heading {
     display: flex;
@@ -51,47 +60,61 @@
     justify-content: space-between;
     margin-left: 2%;
     margin-top: 2%;
+    margin-bottom:2%;
 }
-
+#logo{
+    height: 24%;
+    width: 24%;
+}
 #logo>img {
-    height: 30px;
-    width: 130px;
+    height: 100%;
+    width: 100%;
     margin-top: 2%;
     margin-left: 2%;
     position: relative;
     cursor: pointer;
 }
-
 #head {
     position: relative;
-    font-size: 30px;
+    font-size: 155%;
     font-weight: bolder;
-    color: white;
+    color:white;
 }
 
 #link {
     position: relative;
     display: flex;
-    width: 20%;
-    justify-content: space-between;
+    width: 15%;
+    justify-content: space-around;
     color: beige;
+    gap: 20%;
+}
+#link div{
+    border: 2px solid #fff;
+    padding: 6px 15px;
+border-radius: 8px;
+margin-left: -13%;
+}
+#link div:hover{
+font-weight: bold;
 }
 
 #description {
     margin-top: 1%;
     margin-left: 5%;
-    color: #083358;
+    color:black;
+    font-size:large;
+    font-weight: 500;
+   position: relative;
 }
 
 #description>p {
-    margin-bottom: -3%;
+    margin-bottom: -2%;
 }
-
 #description>p::first-letter {
-    font-size: 170%;
-    color: #61105E;
+    font-size: 120%;
+    color:white;
     font-weight: bold;
-
 }
 
 #rightdiv {
@@ -101,68 +124,69 @@
 }
 
 form {
-    height: 80%;
+    height: 100%;
     width: 90%;
     display: flex;
     flex-direction: column;
     margin: auto;
     position: absolute;
-    top: 15%;
+    top: 5%;
     align-items: center;
 }
 
 .formbox {
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    border: 2px solid white;
+    /* background-color: #fff; */
+    background: transparent;
+    /* padding: 6px; */
+    height: 10%;
     width: 70%;
-    height: 13%;
-    margin-top: 5%;
-    position: relative;
-    background-color: white;
+    padding-right: 40px;
+    margin-bottom: 2%;
 }
 
 .formbox input {
-    width: 90%;
-    height: 100%;
-    font-size: 15px;
+    width: 100%;
     border: none;
-    outline: none;
-    overflow: hidden;
-    transition: max-height 0.5s;
-    align-items: center;
-    margin-left: 2%;
-    background: none;
+    outline: 0;
+    font-size: 14px;
+    height: 100%;
+    background:transparent;
+    color: #fff;
+   
+}
+input::placeholder{
+    color: #c0bdbd;
 }
 input:focus::placeholder{
-    color: transparent;
+    color:transparent;
 }
-
 i {
-    color: rgb(99, 98, 98);
+    color:white;
     margin-left: 2%;
-}
-
-#buttons {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 10%;
+    margin-right: 3%;
 }
 
 button {
     cursor: pointer;
     outline: none;
-    width: 25%;
-    margin-top: 12px;
-    height: 40px;
-    border-radius: 10px;
-    border: 2px solid rgb(86, 87, 86);
-    color: rgb(99, 98, 98);
-    font-weight: bold;
+    width: 40%;
+    margin-top: 1%;
+    border-radius: 8px;
+    border: 2px solid #003B95;
+    background:#003B95;
+    color: rgb(252, 250, 250);
+    /* font-weight: bold; */
+    height: 10%;
 }
-
 button:hover {
-    background: transparent;
-    border: 2px solid #146C94;
-    color: #146C94;
+    background: #003B95;
+    border: 2px solid white;
+    color: white;
+    font-size:15px;
 }
 
 #link div {
@@ -180,3 +204,47 @@ a {
     text-decoration: none;
     color: white;
 }
+#rightdiv p{
+    font-size: medium;
+    margin-top: 2%;
+    color: #fff;
+}
+#rightdiv a{
+    color:purple;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 850px) {
+  
+   #link div{
+    border: none;
+    padding: none;
+   }
+   #link p{
+    display: none;
+   }
+   #leftdiv p{
+    font-size: 15px;
+   }
+   #rightdiv p{
+    font-size: 12px;
+   }
+   input::placeholder{
+    font-size: 9px;
+   }
+  }
+
+  @media only screen and (max-width: 650px) {
+    #link{
+        flex-direction: column;
+       }
+   #leftdiv p{
+   font-size: 8px;
+   margin-bottom: -7%;
+   }
+    input::placeholder{
+        font-size: 0px;
+       }
+   }
