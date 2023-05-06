@@ -30,6 +30,7 @@
         justify-content: space-between;
         padding: 12px 30px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #003b95;
     }
     nav ul{ 
         list-style: none;
@@ -39,17 +40,17 @@
         padding:  3px 18px;
     }
     .Resister a{     
-        background-color: black;
+        background-color: #fff;
         border-radius: 20px;
         padding: 5px 20px;
-        color: #fff;
+        color: #000;
     }
     .Resister{ 
         color: white;
     }
     a{ 
         text-decoration: none;
-        color: #121213;
+        color: #fff;
         font-size: 13px;
         font-weight: 500;
         transition:  3s linear;
@@ -80,6 +81,7 @@
             width: 40px;
             height: 40px;
             margin-right: 150px;
+            color: #fff;
             }    
         nav ul{
             position: absolute;
@@ -96,13 +98,14 @@
             padding: 10px 20px;
             backdrop-filter: blur(15px);
             transition: 1s linear;
+            background-color: #003b95;
         }
         nav ul li{
             padding:5px 0px;
             text-align: left;
         }
         nav ul li a{
-            color: black;
+            color: #fff;
         }
         .active{
             position: fixed;
@@ -134,12 +137,14 @@
         padding: 5px 14px;
         border: 1px solid rgb(161, 160, 160);
         cursor: pointer;
-        background-color: var(--grey-d);
+        background-color: #EBF3FF;
         border-radius: 50px;        
         transition: 0.2s ease-in-out;
     }
     .Categories > button:hover {
         transform: scale(1.05);
+        background-color: #003b95;
+        color: #fff;
     }
     .Categories {
         white-space: nowrap;
@@ -153,36 +158,249 @@
     
 
 
-    /* ===================================== - Left Side Div - ==================================== */
+    /* ===================================== - Left Side Div  - ==================================== */
 
     #Destination-body{
-         /* background-color: #EEEEEE; */
-         display: flex;
-         margin-top: 10px;
+        display: flex;
+        margin-top: 10px;
     }
+
+    #Destination-Data25{
+        height: calc(100vh - 70px);
+        width: 15%;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 20px 0px 0px 15px;
+        /* border: 2px solid red; */
+    }
+    #Destination-Data25::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to bottom, rgb(252, 251, 251), rgb(140, 139, 139));
+        border-radius: 500px;
+    }
+    #Destination-Data25::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .filterSection {
+        width: 100%;
+        margin: auto;
+        color: #000;
+        font-size: 13px;
+        /* border: 2px solid red; */
+    }
+
+    .filterSection h3 {
+        color: #000;
+        margin: 3px;
+    }
+
+    #filterPrice span {
+        width: 100%;
+        margin-left: 5px;
+    }
+
+    #filterPrice > div {
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+    }
+
+    input[type=radio] {
+        border: 10px;
+        width: 10%;
+        height: 2em;
+    }
+
+
+    /* ===================================== - Middle Side Div start - ==================================== */
+
+    #Destination-Data22 {
+        height: calc(100vh - 70px);
+        width: 65%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    #Destination-Data22::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to bottom, rgb(39, 8, 173), rgb(32, 10, 155));
+        border-radius: 500px;
+    }
+    #Destination-Data22::-webkit-scrollbar {
+        width: 8px;
+    }
+    #Destination-Data22::-webkit-scrollbar-track {
+        background-color: #dfdcdcb2;
+    }
+
+    #Destination-Data22 {
+        width: 65%;
+        padding: 10px;
+    }
+    #Destination-Data22>div {
+        align-items: center;
+        justify-content: space-between;
+    }
+    #top-div-search-filter{
+        display: flex;
+        margin-bottom: 25px;
+    }
+    .searchIcon {
+        width: 30%;
+        display: flex;
+        border-radius: 6px;
+        align-items: center;
+        border: 1px solid black;
+        padding: 9px;
+        padding-right: 40px;
+    }
+    #search2 {
+        width: 100%;
+        border: none;
+        outline: 0;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    #filter{
+        width: 30%;
+        padding: 8px 0px;
+        padding-left: 10px;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+    #select-tag {
+        border: none;
+    }
+
+
+    #tourist-Data{
+        width: 96%;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+    .card{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        margin-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        transition: transform 0.4s;
+    }
+    .cardLeft{
+        width: 25%;
+        height: 170px;
+        margin: auto;
+    }
+    .cardLeft > img{
+        width: 100%;
+        height: 170px;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+
+    .cardMiddle{
+        width: 50%;
+        padding: 8px 15px; 
+    }
+    .cardMiddle > p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        font-size: small;
+    }
+    .packageD{
+        display: flex;
+        gap: 10px;
+    }
+    .packageD > p {
+        border: 1px solid rgb(194, 193, 193) ;
+        margin-top: 5px;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: x-small;
+        font-weight: 500;
+        color: rgb(69, 68, 68);
+    }
+    
+
+    .cardiRght{
+        width: 25%;
+        text-align: right;
+        padding: 15px;
+        background-color: #f7f7f7;
+        border-radius: 0px 10px 10px 0px;
+    }
+    .EMI-D{
+        display: flex;
+        gap: 8px;
+        justify-content: end;
+        font-size: 12px;
+        font-weight: 500;
+        color: #84898F;
+    }
+    .EMI-D > p:nth-child(1){
+        border: 1px solid gray;
+        padding: 0px 5px;
+        border-radius: 3px;
+    }
+    .price-D s{
+        font-size: x-small;
+        font-weight: 500;
+    }
+    .priceDsc{
+        font-size: x-small;
+        color: #84898F;
+    }
+    .cardiRght > button {
+        border: none;
+        padding: 5px 15px;
+        border: 1px solid rgb(161, 160, 160);
+        cursor: pointer;
+        background-color: #003b95;
+        color: #fff;
+        border-radius: 4px;        
+        transition: 0.2s ease-in-out;
+        margin-top: 10px;
+    }
+    .cardiRght > button:hover {
+        transform: scale(1.05);
+        background-color: #EBF3FF;
+       color: #000;
+    }
+
+
+    /* ===================================== - Right Side Div - ==================================== */
 
     #Destination-Data {
         height: calc(100vh - 70px);
-        width: 22%;
+        width: 20%;
         position: relative;
         overflow-y: scroll;
         overflow-x: hidden;
         transition: all 0.5s ease-in-out;
     }
+    #Destination-Data::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to bottom, rgb(39, 8, 173), rgb(32, 10, 155));
+        border-radius: 500px;
+    }
     #Destination-Data::-webkit-scrollbar {
+        width: 8px;
+    }
+    #Destination-Data::-webkit-scrollbar-track {
         display: none;
     }
      #Destination-Data {
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
-        padding: 30px;
+        gap: 10px;
+        padding: 20px;
         text-align: center;
     }
     #Destination-Data > div > img {
         width: 100%;
-        height: 150px;
+        height: 130px;
         margin: auto;
         border-radius: 10px;
     }
@@ -207,7 +425,7 @@
         transform: scale(1.05);
         border-radius: 10px;
     }
-    #Destination-Data > div > button {
+    /* #Destination-Data > div > button {
         margin: auto;
         border: none;
         display: block;
@@ -217,92 +435,37 @@
         border-radius: 40px;
         border: 2px solid rgb(205, 205, 205);
         cursor: pointer;
-        /* background-color: #0071C2;
-        background-color: #003580; */
+       
     }
     #Destination-Data > div > button:hover{
         background-color: #006ce4;
-        /* background-color: #003b95; */
         color: #fff;
         border: 2px solid white;
-    }
+    } */
 
-    /* ===================================== - Right Side Div - ==================================== */
-
-    #Destination-Data22 {
-        height: calc(100vh - 70px);
-        width: 100%;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        padding: 40px 30px 30px 30px;
-    }
-    #Destination-Data22::-webkit-scrollbar-thumb {
-        background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
-    }
-    #Destination-Data22::-webkit-scrollbar {
-        width: 8px;
-        border-radius: 500px;
-        margin-right: 20px;
-        border: 5px solid red;
-    }
-    #Destination-Data22::-webkit-scrollbar-track {
-        background-color: #9e9e9eb2;
-    }
-    #Destination-Data22 {
-        width: 80%;
-        padding: 10px;
-    }
-    #Destination-Data22>div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .searchIcon {
-        display: flex;
-        border-radius: 3px;
-        align-items: center;
-        border: 0.5px solid gray;
-        padding: 10px;
-        padding-right: 40px;
-    }
-    #search2 {
-        width: 100%;
-        border: none;
-        outline: 0;
-        font-size: 14px;
-    }
-    #filter {
-        padding: 10px 0px;
-        padding-left: 10px;
-        border-radius: 3px;
-        border: 0.1px solid gray;
-    }
-    #select-tag {
-        border: none;
-    }
-
+    
     /* ============================ - Footer - ====================================== */
     
     footer{
         display: flex;
         flex-direction: column;
-        background-color: #006ce4;
+        background-color: #003b95;
         color: white;
     }
     footer .top{
         display: flex;
         justify-content: space-between;
-        padding: 40px 80px;
+        padding: 40px 60px;
     }
     footer .top .logo{
-        width:30%;
+        width:25%;
     }
     footer .top .logo img{
-        width:75%;
+        width:65%;
         margin-bottom: 18px;
     }
     footer .top .logo p{
-        line-height: 30px;
+        line-height: 25px;
         padding-left:15px;
     }
     footer .top .about{
@@ -311,18 +474,18 @@
         margin-top: 8px;
         gap: 80px;
     }
-    footer .top .about h2{
+    footer .top .about h3{
         margin-bottom: 15px;
     }
     footer .top .about ul {
         list-style: none;
-        line-height: 40px;
-        margin-bottom: 15px;
+        line-height: 30px;
+        margin-bottom: 8px;
     }
     footer .bottom{
         display: flex;
         justify-content: space-between;
-        padding: 30px 80px;
+        padding: 30px 70px;
         padding-bottom: 40px;
     }
     footer hr{
@@ -377,6 +540,9 @@
     /* ============================ - Footer End - ====================================== */
 
     
+    
+    /* ================================================================== */
+
 
 
 /* ====================================================================================================== */
@@ -389,7 +555,7 @@
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
         <div style="width: 15%;" class="logo_img">
-            <a href="./index.html"><img src="./Imgs/Travasure_black_Transparent.png" alt="err" style="width: 100%;margin: auto; display: block;"></a> 
+            <a href="./index.html"><img src="./Imgs/Travasure_white_with_logo_Transparent.png" alt="err" style="width: 100%;margin: auto; display: block;"></a> 
         </div>
         <div class="options" id="option">
             <ul>
@@ -428,12 +594,54 @@
     <!-- ========================================================================================== -->
 
     <div id="Destination-body">
-        <div id="Destination-Data">
-            <!-- Append data here -->
+        <div id="Destination-Data25">
+            <div class="filterSection">
+                <div id="filterPrice">
+                    <h3>Price</h3>
+                    <hr>
+                    <div>
+                        <input type="radio" name="PriceValue" value="ZeroToNinetynine" id="one">
+                        <span>Rs. 1000 - Rs. 3000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="oneHunderedToOneNininetynine" id="two">
+                        <span>Rs. 3000 - Rs. 8000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="twoHunderedToTowNininetynine" id="three">
+                        <span>Rs. 8000 - Rs. 10000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="threeHunderedToThreeNininetynine" id="four">
+                        <span>Rs. 11000 - Rs. 15000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="fourHunderedToFourNininetynine" id="five">
+                        <span>Rs. 15000 - Rs. 20000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="fiveHunderedToFiveNininetynine" id="six">
+                        <span>Rs. 20000 - Rs. 25000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="sixHunderedToSixNininetynine" id="seven">
+                        <span>Rs. 25000 - Rs. 30000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="sevenHunderedToNineNininetynine" id="eight">
+                        <span>Rs. 30000 - Rs. 35000</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="PriceValue" value="oneThousandAbove" id="nine">
+                        <span> Above &nbsp; - Rs. 35000 </span>
+                    </div>
+                </div><br>
+            </div>
         </div>
         <hr>
+
         <div id="Destination-Data22">
-            <div>
+            <div id="top-div-search-filter">
                 <h2>Destination</h2>
                 <form class="searchIcon">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -448,7 +656,16 @@
                     </select>
                 </div>
             </div>
+            
+            <div id="tourist-Data">
+                 <!-- Tourist-Data Append here -->
+            </div>
         </div>
+
+        <div id="Destination-Data">
+            <!-- Destination-Data Append here -->
+        </div>
+        
     </div>
 
 
@@ -458,7 +675,7 @@
         <div class="top">
             <div class="logo">
                 <div> 
-                    <img src="./Imgs/Travasure_white_Transparent.png" alt="err">
+                    <img src="./Imgs/Travasure_white_with_logo_Transparent.png" alt="err">
                 </div>
                 <div> 
                     <p>Convenience is our prority to satisfy our customers, and we provide all the features you can easily and quickly.</p>
@@ -466,7 +683,7 @@
            </div>
            <div class="about">
                 <div>
-                    <h2>About</h2>
+                    <h3>About</h3>
                     <ul>
                         <li>How to Book</li>
                         <li>Contact Us</li>
@@ -474,7 +691,7 @@
                     </ul>
                 </div>
                 <div> 
-                    <h2>Products</h2>
+                    <h3>Products</h3>
                     <ul>
                         <li>destination</li>
                         <li>Flight</li>
@@ -482,7 +699,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h2>Social</h2>
+                    <h3>Social</h3>
                     <ul>
                         <li>Facebook</li>
                         <li>Twitter</li>
