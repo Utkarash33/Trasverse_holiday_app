@@ -22,7 +22,7 @@ okbtn.addEventListener("click",function(e){
     }else{
         let flag=false;
  for(let i=0;i<userls.length;i++){
-if(userls[i].email==emailinp.value.toLowerCase() && userls[i].password==passwordinp.value.toLowerCase()){
+if(userls[i].email.toLowerCase()==emailinp.value.toLowerCase() && userls[i].password.toLowerCase()==passwordinp.value.toLowerCase()){
     flag=true;
     break;
 }
@@ -35,7 +35,7 @@ if(userls[i].email==emailinp.value.toLowerCase() && userls[i].password==password
         }else{
             let a=true;
             for(let i=0;i<userls.length;i++){
-                if(userls[i].email==emailinp.value.toLowerCase() && userls[i].password!=passwordinp.value.toLowerCase()){
+                if(userls[i].email.toLowerCase()==emailinp.value.toLowerCase() && userls[i].password.toLowerCase()!=passwordinp.value.toLowerCase()){
                     a=false;
                     break;
                 }

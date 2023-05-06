@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travasure-Travel around the world</title>
+    <link rel="icon" href="./Imgs/Travasure_icon.png">
     <script src="https://kit.fontawesome.com/9d25914ace.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/usersignin.css">
 </head>
@@ -13,11 +14,12 @@
 <body>
     <div class="container">
         <div class="backimage">
-            <img src="./saritaImage/user-background-image.jpg" alt="Error" id="backimage">
+            <!-- <img src="./saritaImage/user-background-image.jpg" alt="Error" id="backimage"> -->
             <div id="heading">
-                <div id="logo"><img src="./Imgs/Travasure_black_Transparent.png" alt="" id="logo-image"></div>
+                <div id="logo"><img src="./Imgs/Travasure_white_with_logo_Transparent.png" alt="" id="logo-image"></div>
                 <div id="head">Sign In</div>
-                <div id="link"><a href="./adminlogin.html">
+                <div id="link">
+                    <a href="./adminlogin.html">
                         <div><i class="fa fa-user"></i>
                             <p>Admin</p>
                         </div>
@@ -37,8 +39,9 @@
                         <p>Invest time in peace,try something new.</p><br>
                         <p>See the world through a different lens.</p><br>
                         <p>The new day calls for us to go far.</p><br>
-                        <p>Spend some time with nature.</p><br>
+                        <!-- <p>Spend some time with nature.</p><br> -->
                     </div>
+                    <!-- <img src="https://img.freepik.com/free-photo/member-log-membership-username-password-concept_53876-101281.jpg?w=740&t=st=1683317318~exp=1683317918~hmac=eb9187596debff63ecc6b9dc3a748b240c8e0366b4491d0d53047225f331afbf" alt=""> -->
                 </div>
                 <div id="rightdiv">
                     <form>
@@ -51,13 +54,19 @@
                             <input type="email" id="email" name="email" placeholder="Enter your Email">
                         </div>
                         <div class="formbox">
+                            <i class="fa fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="111-2222-333">
+                        </div>
+                        <div class="formbox">
                             <i class="fa fa-lock"></i>
                             <input type="password" id="password" name="password" placeholder="Enter your password">
                         </div>
-                        <div id="buttons">
-                            <button id="done">OK</button>
-                            <button id="login">Log In</button>
+                        <div class="formbox">
+                            <i class="fa fa-key"></i>
+                            <input type="password" id="cpassword" name="password" placeholder="Conform your password">
                         </div>
+                            <button id="done">Sign In</button>
+                            <p>Already have an account <a href="./userlogin.html">Login</a></p>
                     </form>
                 </div>
             </div>
