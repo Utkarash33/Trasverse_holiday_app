@@ -161,7 +161,7 @@
 
 <script>
 
-let mybookings=JSON.parse(localStorage.getItem("mybookings"))||[]
+let book=JSON.parse(localStorage.getItem("mybookings"))||[]
 let container=document.getElementById("seccont")
 
 let form=document.querySelector("form")
@@ -186,7 +186,8 @@ let form=document.querySelector("form")
                 age:form.ibage.value
             }
             console.log(obj)
-            localStorage.setItem("mybookings",JSON.stringify(obj))
+            book.push(obj)
+            localStorage.setItem("mybookings",JSON.stringify(book))
            
            
 
