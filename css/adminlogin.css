@@ -104,8 +104,17 @@ font-weight: bold;
 
 #description>p {
     margin-bottom: -2%;
+    display: block;
+    opacity: 0;
+    animation: reveal .10s forwards var(--delay);
 }
-
+@keyframes reveal{
+    from {translate:0 20px;
+    }
+    to {translate:none;
+        opacity:1;
+    }
+}
 #description>p::first-letter {
     font-size: 120%;
     color: red;
@@ -139,6 +148,7 @@ form {
     width: 70%;
     padding-right: 40px;
     margin-bottom: 3%;
+    margin-top: 3%;
     border-bottom: 2px solid rgb(250, 247, 247);
 }
 
@@ -174,7 +184,7 @@ button {
     background: #284f5a;
     border: 2px solid white;
     color: white;
-    height: 10%;
+    height: 20%;
     margin-bottom: 2%;
     font-weight: bold;
     font-size:15px;
@@ -213,6 +223,9 @@ a {
        }
        input::placeholder{
         font-size: 9px;
+       }
+       #head{
+        font-size: 20px;
        }
       }
     

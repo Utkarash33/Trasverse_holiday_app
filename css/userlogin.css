@@ -27,16 +27,9 @@
     position: absolute;
     border-radius: 20px;
     background-color:#2E79BA ;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
     /* background: linear-gradient(90deg,  #003B95 15%,white 65%); */
-}
-
-.backimage #backimage {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    filter: blur(2px);
-    border-radius: 20px;
 }
 
 #bottom {
@@ -47,12 +40,6 @@
     position: relative;
     width: 50%;
 }
-/* #leftdiv img{
-    height: 100%;
-    width: 100%;
-    border-bottom-left-radius: 20px;
-   filter: blur(2px);
-} */
 
 #heading {
     display: flex;
@@ -110,6 +97,16 @@ font-weight: bold;
 
 #description>p {
     margin-bottom: -2%;
+    display: block;
+    opacity: 0;
+    animation: reveal .10s forwards var(--delay);
+}
+@keyframes reveal{
+    from {translate:0 20px;
+    }
+    to {translate:none;
+        opacity:1;
+    }
 }
 #description>p::first-letter {
     font-size: 120%;
@@ -124,7 +121,7 @@ font-weight: bold;
 }
 
 form {
-    height: 100%;
+    height: 70%;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -132,6 +129,7 @@ form {
     position: absolute;
     top: 10%;
     align-items: center;
+    text-align: center;
 }
 
 .formbox {
@@ -142,10 +140,11 @@ form {
     /* background-color: #fff; */
     background: transparent;
     /* padding: 6px; */
-    height: 10%;
+    height: 15%;
     width: 70%;
     padding-right: 40px;
     margin-bottom: 3%;
+    margin-top: 3%;
 }
 
 .formbox input {
@@ -179,8 +178,8 @@ button {
     border: 2px solid #003B95;
     background:#003B95;
     color: rgb(252, 250, 250);
-    /* font-weight: bold; */
-    height: 10%;
+    font-weight: bold;
+    height: 13%;
     margin-bottom:2% ;
 }
 button:hover {
@@ -211,7 +210,7 @@ a {
     color: #fff;
 }
 #rightdiv a{
-    color:purple;
+    color:rgb(183, 216, 35);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -225,8 +224,9 @@ a {
    #link p{
     display: none;
    }
-   #leftdiv p{
-    font-size: 15px;
+  
+   #leftdiv{
+    height: 90%;
    }
    #rightdiv p{
     font-size: 12px;
@@ -234,6 +234,10 @@ a {
    input::placeholder{
     font-size: 9px;
    }
+   .backimage{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
   }
 
   @media only screen and (max-width: 650px) {

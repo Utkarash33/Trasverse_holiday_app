@@ -110,6 +110,16 @@ font-weight: bold;
 
 #description>p {
     margin-bottom: -2%;
+    display: block;
+    opacity: 0;
+    animation: reveal .10s forwards var(--delay);
+}
+@keyframes reveal{
+    from {translate:0 20px;
+    }
+    to {translate:none;
+        opacity:1;
+    }
 }
 #description>p::first-letter {
     font-size: 120%;
@@ -179,7 +189,7 @@ button {
     border: 2px solid #003B95;
     background:#003B95;
     color: rgb(252, 250, 250);
-    /* font-weight: bold; */
+    font-weight: bold;
     height: 10%;
 }
 button:hover {
@@ -210,10 +220,15 @@ a {
     color: #fff;
 }
 #rightdiv a{
-    color:purple;
+    color:rgb(183, 216, 35);
     text-decoration: underline;
     font-weight: bold;
 }
+.backimage{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 
 @media only screen and (max-width: 850px) {
