@@ -1,7 +1,6 @@
+
+
 let loc = document.getElementById("location");
-
-
-
 
 function CreateObject(name, information, image, price, package, catogary){
     this.name = name;
@@ -17,13 +16,16 @@ form.addEventListener("submit", (e)=>
 {
     
     e.preventDefault();
-    //let obj = new CreateObject(name, information, image, price, package, catogary);
-
     postDataToAPI();
+    
+
+    // setTimeout(() => {
+    //   window.location.href="./adminProductPage.html";
+    // }, 3000)
     
 })
 function postDataToAPI(){
-    //e.preventDefault();
+    
     let id;
     fetch(`https://frail-show.onrender.com/data`)
     .then(res => res.json())
@@ -34,22 +36,23 @@ function postDataToAPI(){
                 addLoc(element.id)
             }
         });
-        
-    })
-    
-}
+    }) 
+};
+
 function addLoc(id)
 {
     fetch(`https://frail-show.onrender.com/data/${id}`)
     .then(response => response.json())
     .then(data => {
-        let name = document.getElementById("name").value;
-        let information = document.getElementById("info").value;
-        let image = document.getElementById("image").value;
-        let price = document.getElementById("price").value;
-        let package = document.getElementById("package").value;
-        let catogary = document.getElementById("catogary").value;
+      let name = document.getElementById("name").value;
+      let information = document.getElementById("info").value;
+      let image = document.getElementById("image").value;
+      let price = document.getElementById("price").value;
+      let package = document.getElementById("package").value;
+      let catogary = document.getElementById("catogary").value;
+
       const newTourist = new CreateObject(name, information, image, price, package, catogary);
+      
       data.tourist.push(newTourist);
       //console.log(data.tourist)
       fetch(`https://frail-show.onrender.com/data/${id}`, {
@@ -70,4 +73,6 @@ function addLoc(id)
     .catch(error => {
       console.error(error);
     });
+    alert (`Data has been added !`);
+    //window.location.href="./adminProductPage.html";
 }
