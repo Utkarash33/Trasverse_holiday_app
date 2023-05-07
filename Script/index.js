@@ -6,9 +6,6 @@ menu_btn.addEventListener("click",()=>
 
 })
 
-
-
-
 // ================nav Bar=========================//
 let icon = document.getElementById("logo")
 icon.addEventListener("click",()=>
@@ -45,3 +42,53 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % imageLinks.length;
   head.style.backgroundImage = `url('${imageLinks[currentIndex]}')`;
 }, 3000);
+
+
+// ==============================Login=======================================//
+
+let Login  = document.getElementById("LoginText")
+
+let data=JSON.parse(localStorage.getItem("userdata"))||[];
+let x= false;
+  data.forEach((elm)=>
+  {
+    console.log(elm.present)
+    if(elm.present==true)
+    {
+      x= true;
+    }
+  })
+  if(x==false)
+  {
+    Login.innerText="Resister"
+  }
+  else
+  {
+    Login.innerText = "Log Out"
+  }
+Login.addEventListener("click",()=>
+{ 
+  if(Login.innerText == "Resister")
+    {
+    window.location.href="./userlogin.html"
+    }
+     else if(Login.innerText == "Log Out")
+    { 
+     
+      data.present = false;
+      Login.innerText = "Resister"
+    }
+})
+ let myBooking = document.getElementById("mybookings")
+ myBooking.addEventListener("click",()=>
+ {
+  if(Login.innerText == "Log Out")
+  {
+    window.location.href ="./"
+  }
+  else
+  {
+    alert("User has to Login")
+    window.location.href = "./userlogin.html"
+  }
+ })
