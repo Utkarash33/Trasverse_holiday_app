@@ -1,4 +1,4 @@
-let logo=document.getElementById("logo-image");
+let logo=document.getElementById("logo-image" );
 logo.addEventListener("click",function(){
     window.location.href="./index.html";
 });
@@ -52,8 +52,13 @@ let obj={
 }
 userls.push(obj);
 localStorage.setItem("userdata",JSON.stringify(userls));
+nameinp.value="";
+emailinp.value="";
+passwordinp.value="";
+cpasswordinp.value="";
+phoneinp.value="";
 alert("Welcom new user to our Travasure,I hope you will like our website.");
-window.location.href="./usersignin.html";
+window.location.href="./index.html";
             }
     }
 }
