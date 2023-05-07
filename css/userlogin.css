@@ -17,7 +17,7 @@
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(90deg, white 65%, #003B95 35.1%);
-    /* background-color:#D8E9F0; */
+
 }
 
 .backimage {
@@ -27,9 +27,6 @@
     position: absolute;
     border-radius: 20px;
     background-color:#2E79BA ;
-    /* margin-top: 30px;
-    margin-bottom: 30px; */
-    /* background: linear-gradient(90deg,  #003B95 15%,white 65%); */
 }
 
 #bottom {
