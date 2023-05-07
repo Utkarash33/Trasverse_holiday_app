@@ -3,13 +3,6 @@ logo.addEventListener("click",function(){
     window.location.href="./index.html";
 });
 
-
-// let loginbtn=document.getElementById("done");
-// loginbtn.addEventListener("click",function(e){
-//     e.preventDefault();
-//     window.location.href="./usersignin.html";
-// });
-
 let emailinp=document.getElementById("email");
 let passwordinp=document.getElementById("password");
 
@@ -32,6 +25,7 @@ if(userls[i].email.toLowerCase()==emailinp.value.toLowerCase() && userls[i].pass
             alert("login successfully");
             email.value="";
             password.value="";
+            localStorage.setItem("userdata",JSON.stringify(userls));
             window.location.href= "./index.html";
         }else{
             let a=true;
