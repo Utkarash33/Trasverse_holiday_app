@@ -26,16 +26,14 @@ function Display(data){
     data.forEach((element) => {
         let card = document.createElement("div");
         let location = document.createElement("h5");
-        let location2 = document.createElement("h5");
         let image = document.createElement("img");
         let visit = document.createElement("button");
 
         visit.textContent = "Select Destination";
-        location.textContent = element.name;
-        location2.textContent = element.location;
+        location.textContent = element.location;
         image.src = element.img;
 
-        card.append(image,location2,location);
+        card.append(image,location);
         Container.append(card);
     });
 }
@@ -49,9 +47,10 @@ async function FetchTouristData(){
     try{
         let request = await fetch("https://frail-show.onrender.com/data");
         request = await request.json();
-        console.log(request);
+        //console.log(request);
         //Display(request);
         DisplayTouristData(request)
+        //searchData(request);
     }catch(error){
         console.log(error);
     }
@@ -85,6 +84,9 @@ function DisplayTouristData(data){
             let package = document.createElement("p");
             let catogary = document.createElement("p");
 
+            //let ratingDiv = document.createElement("div");
+            let rating = document.createElement("p");
+            rating.setAttribute("id", "ratingD");
 
             let EMIDiv = document.createElement("div");
             EMIDiv.setAttribute("class", "EMI-D");
@@ -120,7 +122,7 @@ function DisplayTouristData(data){
             //     alert("Make sure you have logged in!")
                 Data.push(element);
                 localStorage.setItem("Destination-Book", JSON.stringify(Data))
-                // window.location.href = "sign-in.html"
+                 window.location.href = "./address.html"
                   // return
             // }
             // else{
@@ -133,6 +135,7 @@ function DisplayTouristData(data){
             info.textContent = element.info;
             package.textContent = element.package;
             catogary.textContent = element.catogary;
+            rating.textContent = element.Rating;
         
 
             
@@ -140,7 +143,7 @@ function DisplayTouristData(data){
             packageDiv.append(package,catogary)
             EMIDiv.append(Emi,Emiprice)
             priceDiv.append(price,dprice)
-            middle.append(name,info,packageDiv);
+            middle.append(name,info,packageDiv,rating);
             right.append(EMIDiv,priceDiv,priceDsc,book_Now);
             card.append(left,middle,right);
             DestinationData.append(card);
@@ -150,4 +153,23 @@ function DisplayTouristData(data){
 }
 
 
+// let form  = document.querySelector("form");
+
+// function searchData(request){
+//     form.addEventListener("submit",(e) => {
+//         e.preventDefault();
+//         let searchD = form[0].value;
+//         console.log()
+    
+//         let filters = request.filter((element) =>{
+//             if(element.name.toUpperCase().includes(searchD.toUpperCase()) === true){
+//                 return true;
+//             }else{
+//                 return false;
+//             }
+//         })
+//         console.log(filters)
+//         DisplayTouristData(filters)
+//     }) 
+// }
 
