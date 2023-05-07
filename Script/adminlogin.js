@@ -15,7 +15,7 @@ okbtn.addEventListener("click",function(e){
         alert("Admin,Please fill the all inputs.");
     }else if(emailinp.value.toLowerCase()=="admin@travasure.com" && passwordinp.value.toLowerCase()=="travasure"){
        alert("Welcome Admin");
-       window.location.href="./adminlogin.html";
+       window.location.href="./adminHome.html";
     }else if(emailinp.value.toLowerCase()!="admin@travasure.com"&&passwordinp.value.toLowerCase()=="travasure"){
     alert("Wrong EmailId,Please put correct emailid");
     emailinp.value="";
