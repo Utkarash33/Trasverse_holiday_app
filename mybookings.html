@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travasure - Travel around the world</title>
+    <link rel="icon" href="images/icon.png">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/mybookings.css">
+
+</head>
+<body>
+<!-- <img src="images/logo2.png" alt=""> -->
+
+
+
+
+
+
+<nav>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" id="bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+    <div style="width: 20%;" class="logo_img">
+        <a href="./index.html"><img src="./images/logo2.png" alt="err" style="width: 100%;margin: auto; display: block;"></a> 
+    </div>
+    <div class="options" id="option">
+        <ul>
+            <li><a href="#">Download App</a></li>
+            <li><a href="#">Parter With Us</a></li>
+            <li><a href="#">Installment</a></li>
+            <li><a href="#">Saved</a></li>
+            <li><a href="./Destination.html">Holidays</a></li>
+            <li><a href="#">My Bookings</a></li>
+        </ul>
+    </div>
+    <div  class="Resister">
+        <a href="#">Resister</a></li>
+    </div>
+</nav>
+
+
+
+
+
+
+<div class="container" id="seccont">
+
+
+    <div id="cont">
+
+    </div>
+   
+
+</div>  
+
+      
+</body>
+
+
+
+
+
+
+
+<script>
+
+let book=JSON.parse(localStorage.getItem("mybookings"))||[]
+console.log(book)
+let data= JSON.parse(localStorage.getItem("Destination-Book")) || [];
+console.log(data)
+
+let cont= document.getElementById("cont");
+display(data)
+function display(data){
+    cont.innerHTML=""
+    data.forEach(element => {
+        let card=document.createElement("div")
+        card.className="card"
+
+        let imgdiv=document.createElement("div")
+        imgdiv.className="imgdiv"
+
+        let image=document.createElement("img")
+        image.src=element.images
+        imgdiv.append(image)
+
+
+        let infodiv=document.createElement("div")
+        infodiv.className="infodiv"
+
+
+        let place=document.createElement("h4")
+        place.textContent=element.name
+        let cat=document.createElement("h5")
+        cat.textContent=element.catogory
+        let package=document.createElement("h5")
+        package.textContent=element.package
+        let price=document.createElement("h3")
+        price.textContent=element.price
+        let info=document.createElement("p")
+        info.textContent=element.info
+        let booked=document.createElement("button")
+        booked.textContent="BOOKED SUCCESSFULLY"
+
+        infodiv.append(place,cat,package,price,booked)
+        card.append(imgdiv,infodiv)
+        cont.append(card)
+
+    });
+}
+
+
+
+</script>
+</html>
