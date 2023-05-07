@@ -16,6 +16,10 @@
 <!-- <img src="images/logo2.png" alt=""> -->
 
 
+
+
+
+
 <nav>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" id="bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -40,6 +44,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div class="popup1" id="popup1">
     <img src="images/cross.png" alt="">
     <h2>Sorry</h2>
@@ -58,7 +72,7 @@
 
             <div class="col">
 
-                <h3 class="title">billing address</h3>
+                <h3 class="title">booking details</h3>
 
                 <div class="inputBox" >
                     <span>full name :</span>
@@ -69,22 +83,31 @@
                     <input  id="ibemail" type="email" placeholder="example@example.com">
                 </div>
                 <div class="inputBox" >
-                    <span>address :</span>
-                    <input id="ibadd" type="text" placeholder="room - street - locality">
-                </div>
-                <div class="inputBox" >
-                    <span>city :</span>
-                    <input id="ibcity" type="text" placeholder="Kolkata">
+                    <span>Phone Number :</span>
+                    <input id="ibadd" type="text" maxlength="10" placeholder="1234567890">
                 </div>
 
                 <div class="flex">
+                    <div class="inputBox" >
+                        <span>Source city :</span>
+                        <input id="ibcity" type="text" placeholder="Kolkata">
+                    </div>
+                    <div class="inputBox" >
+                        <span>Number of People:</span>
+                        <input id="ibpeople" type="number" min="0" placeholder="0">
+                    </div>
+                    
+                </div>
+
+
+                <div class="flex">
                     <div class="inputBox">
-                        <span>state :</span>
-                        <input type="text" placeholder="india">
+                        <span>Journey starts:</span>
+                        <input id="ibdate" type="date" placeholder="india">
                     </div>
                     <div class="inputBox">
-                        <span>zip code :</span>
-                        <input type="text" placeholder="123 456">
+                        <span>Age:</span>
+                        <input id="ibage" type="number" min="1" placeholder="0">
                     </div>
                 </div>
 
@@ -137,6 +160,8 @@
 </body>
 
 <script>
+
+let mybookings=JSON.parse(localStorage.getItem("mybookings"))||[]
 let container=document.getElementById("seccont")
 
 let form=document.querySelector("form")
@@ -151,6 +176,20 @@ let form=document.querySelector("form")
             console.log("done");
             // openpopup()
             // container.innerHTML=null
+            let obj={
+                name:form.ibname.value,
+                email:form.ibemail.value,
+                phone:form.ibadd.value,
+                city:form.ibcity.value,
+                people:form.ibpeople.value,
+                date: form.ibdate.value,
+                age:form.ibage.value
+            }
+            console.log(obj)
+            localStorage.setItem("mybookings",JSON.stringify(obj))
+           
+           
+
            window.location.assign("./payment.html")
         }
     })

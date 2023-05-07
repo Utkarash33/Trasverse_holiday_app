@@ -60,8 +60,9 @@ body{
     border-radius: 5px;
     box-shadow: 0 10px 15px rgba(0,0,0,.1);
     padding: 20px;
-    width: 600px;
+    width: 550px;
     padding-top: 160px;
+    opacity: 85%;
 
   
 }
@@ -116,6 +117,7 @@ body{
     position: relative;
     height: 250px;
     width: 400px;
+    z-index: 10;
     
 }
 
@@ -503,20 +505,6 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.2)
                 letter-spacing: 6px;
                 opacity: .8;
               }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
