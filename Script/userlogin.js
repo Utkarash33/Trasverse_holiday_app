@@ -24,6 +24,7 @@ okbtn.addEventListener("click",function(e){
  for(let i=0;i<userls.length;i++){
 if(userls[i].email.toLowerCase()==emailinp.value.toLowerCase() && userls[i].password.toLowerCase()==passwordinp.value.toLowerCase()){
     flag=true;
+    userls[i].present=true;
     break;
 }
         }

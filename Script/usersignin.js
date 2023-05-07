@@ -3,12 +3,6 @@ logo.addEventListener("click",function(){
     window.location.href="./index.html";
 });
 
-// let loginbtn=document.getElementById("login");
-// loginbtn.addEventListener("click",function(e){
-//     e.preventDefault();
-//     window.location.href="./userlogin.html";
-// });
-
 let nameinp=document.getElementById("name");
 let emailinp=document.getElementById("email");
 let passwordinp=document.getElementById("password");
@@ -54,6 +48,7 @@ let obj={
     password:passwordinp.value,
     cpassword:cpasswordinp.value,
     phone:phoneinp.value,
+    present:false,
 }
 userls.push(obj);
 localStorage.setItem("userdata",JSON.stringify(userls));
