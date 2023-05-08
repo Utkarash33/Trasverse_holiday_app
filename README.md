@@ -1,6 +1,6 @@
 ## **Traverse Travel Website**
 
-<img width="450" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210011.png">
+<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/search-explore-white-icon-transparent-png-31634946340qymsafkpk6-removebg-preview.png">
 
 The main motive behind creating this website is to showcase the skills that we learned in Unit 3 of Masai School's program. We used the following technology stacks: HTML, CSS, JavaScript, and the animation library, AOS (https://github.com/michalsnik/aos). We created a JSON server for all the data we needed and worked on that data according to our requirements.
 
