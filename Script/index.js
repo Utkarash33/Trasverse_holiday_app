@@ -74,8 +74,11 @@ Login.addEventListener("click",()=>
     }
      else if(Login.innerText == "Log Out")
     { 
-     
-      data.present = false;
+     data.forEach((elm)=>
+     {
+      elm.present= false;
+     })
+      localStorage.setItem("userdata",JSON.stringify(data))
       Login.innerText = "Resister"
     }
 })
@@ -84,8 +87,9 @@ Login.addEventListener("click",()=>
  {
   if(Login.innerText == "Log Out")
   {
-    window.location.href ="./"
+    window.location.href ="./mybookings.html"
   }
+  
   else
   {
     alert("User has to Login")
