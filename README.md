@@ -1,4 +1,4 @@
-## **Traverse Travel Website**
+# **Traverse Travel Website**
 
 
 The main motive behind creating this website is to showcase the skills that we learned in Unit 3 of Masai School's program. We used the following technology stacks: HTML, CSS, JavaScript, and the animation library, AOS (https://github.com/michalsnik/aos). We created a JSON server for all the data we needed and worked on that data according to our requirements. The link of JSON server is (https://frail-show.onrender.com/data)
@@ -9,11 +9,11 @@ The website has two sides: the admin and the user. To visit the admin side, user
 
 
 
-# **Admin Side**
+## **Admin Side**
 
 The admin side has three pages: Home, AddProduct, and Product. The Home page displays all the booking data. In the AddProduct page, admins can add new tourist sites to the website. In the Product page, admins can see all the tourist locations available on the website and can edit or delete them.
 
-# **User Side**
+## **User Side**
 
 If the user is new to the website, they have to register in the Sign In section with the required details. Otherwise, they can log in to the user side by entering their username and password. If the details are correct, the user will be redirected to the home page.
 
@@ -42,11 +42,17 @@ If everything is successful, the user will be redirected to the payment page, wh
  ## **User Side Features and Functionality**
 
 **Register:** New users can register by filling in details like name, email, password, and phone number in the Sign In section.
+<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210002.png">
 
 **Login:**  Returning users can log in to the user side by entering their username and password.
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210002.png">
 <img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 205951.png">
+
+
+**Admin Login Page**
+
+
 <img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 205929.png">
+
 **Home Page:** The home page is mostly static, and the nav bar's "Holiday" tag leads users to all the available locations where they can book their visits.
 
 
@@ -66,6 +72,12 @@ If everything is successful, the user will be redirected to the payment page, wh
 
 <img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210722.png">
 
-**My Booking Page:** The "My Booking" section allows users to view all their bookings. Note that if the user is not logged in to the system, they have to log in first to access the "My Booking" page.
+
 
 **Booking Confirmation:** After filling in the OTP, the user can successfully book the holiday destination, and they can view their booking details by visiting the "My Booking" page.
+
+<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210751.png">
+
+**My Booking Page:** The "My Booking" section allows users to view all their bookings. Note that if the user is not logged in to the system, they have to log in first to access the "My Booking" page.
+
+<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 221053.png">
