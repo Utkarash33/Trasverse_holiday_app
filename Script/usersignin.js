@@ -58,7 +58,7 @@ passwordinp.value="";
 cpasswordinp.value="";
 phoneinp.value="";
 alert("Welcom new user to our Travasure,I hope you will like our website.");
-window.location.href="./index.html";
+window.location.href="./userlogin.html";
             }
     }
 }
