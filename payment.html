@@ -95,6 +95,7 @@
         <div class="front">
             <div class="image">
                 <img src="images/chip.png" alt="">
+                <div id="amount"></div>
                 <img src="images/visa.png" alt="">
             </div>
             <div class="card-number-box">#### #### #### ####</div>
@@ -123,6 +124,9 @@
         </div>
 
     </div>
+
+   
+
 
     <form action="">
         <div class="inputBox">
@@ -209,7 +213,12 @@ document.querySelector('.cvv-input').oninput = () =>{
     document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
 }
 
-
+let data= JSON.parse(localStorage.getItem("Destination-Book")) || [];
+console.log(data)    
+let amount=document.getElementById("amount")
+let amount1=document.createElement("h3")
+amount1.innerText=`Pay ₹ : ${data[data.length-1].price}`
+amount.append(amount1)
 
 
     let form=document.querySelector("form")
@@ -280,6 +289,7 @@ document.querySelector('.cvv-input').oninput = () =>{
         
 
     })
+
 
 
 
