@@ -70,7 +70,7 @@
 
     <div class="popup3" id="popup3">
       <h4>your otp is</h4>  
-        <h2>1234</h2>
+        <h2 id="optH2">1234</h2>
        <p>use this to authenticate payment <br>
     do not share this with anyone <br>
     valid for 2 mins only</p>
@@ -263,12 +263,14 @@ amount.append(amount1)
     //     //     openpopup()
     //     // }
     // }
+    let otph2 = document.getElementById("optH2")
+    otph2.innerText =  Math.floor(Math.random() * 10000);
     let otpbtn=document.getElementById("okbtn2")
     otpbtn.addEventListener("click",()=>{
         console.log("ok")
         let otp=document.getElementById("otp").value
         // let otpval=otp.value
-        if(otp==="1234"){
+        if(otp===otph2.innerText){
             // window.location.reload()
             container.innerHTML=null
             popup2.classList.remove("openpopup2")
