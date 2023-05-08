@@ -203,6 +203,45 @@
     }
 
 
+
+    #RatingSection {
+        width: 100%;
+        margin: auto;
+        color: #000;
+        font-size: 13px;
+        /* border: 2px solid red; */
+        margin-top: 10px;
+    }
+
+    #RatingSection h3 {
+        color: #000;
+        margin: 0px 5px;
+    }
+    #head{
+        margin: 3px 0px;
+    }
+
+    #RatingSection > div > p {
+        color: #000;
+        margin: 3px;
+    }
+
+    #filterRating {
+        width: 100%;
+        margin-left: 5px;
+    }
+
+    #filterRating > div {
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+    }
+
+    #filterRating > div > p {
+        color: #000;
+        margin: 2px 5px;
+    }
+
     /* ===================================== - Middle Side Div start - ==================================== */
 
     #Destination-Data22 {

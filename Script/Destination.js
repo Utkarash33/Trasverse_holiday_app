@@ -1,6 +1,7 @@
 let Container = document.getElementById("Destination-Data");
 let Data =  JSON.parse(localStorage.getItem("Destination-Book")) || [];
-let Login  = document.getElementById("LoginText")
+let Login  = document.getElementById("LoginText");
+
 async function FetchData(){
     try{
         let request = await fetch("https://frail-show.onrender.com/data");
@@ -20,11 +21,9 @@ function Display(data){
     data.forEach((element) => {
         let card = document.createElement("div");
         let location = document.createElement("h5");
-        let image = document.createElement("img");
-        // let visit = document.createElement("button");
-
-        // visit.textContent = "Select Destination";
         location.textContent = element.location;
+
+        let image = document.createElement("img");
         image.src = element.img;
 
         card.append(image,location);
@@ -58,7 +57,6 @@ function DisplayTouristData(data){
     data.forEach(ele => {
         let data2 = ele.tourist;
         data2.forEach((element) => {
-            //let card = getCard(item.images, item.name, item.catogary, item.package, item.price);
 
             let card = document.createElement("div");
             card.setAttribute("class", "card");
@@ -81,7 +79,6 @@ function DisplayTouristData(data){
             let package = document.createElement("p");
             let catogary = document.createElement("p");
 
-            //let ratingDiv = document.createElement("div");
             let rating = document.createElement("p");
             rating.setAttribute("id", "ratingD");
 
@@ -256,7 +253,6 @@ all.addEventListener("click",()=>{FetchTouristData()})
                 {
                     DestinationData.innerHTML=""
                     arr.forEach((element) => {
-                        //let card = getCard(item.images, item.name, item.catogary, item.package, item.price);
                     
                         let card = document.createElement("div");
                         card.setAttribute("class", "card");
@@ -278,7 +274,6 @@ all.addEventListener("click",()=>{FetchTouristData()})
                         let package = document.createElement("p");
                         let catogary = document.createElement("p");
 
-                        //let ratingDiv = document.createElement("div");
                         let rating = document.createElement("p");
                         rating.setAttribute("id", "ratingD");
 
@@ -311,18 +306,10 @@ all.addEventListener("click",()=>{FetchTouristData()})
 
                         book_Now.textContent = "Book Now";
                         book_Now.addEventListener("click",() =>{
-                            // console.log(logggedIn)
-                        // if (logggedIn == false) {
-                        //     alert("Make sure you have logged in!")
                             Data.push(element);
                             localStorage.setItem("Destination-Book", JSON.stringify(Data))
                             window.location.href = "./address.html"
-                            // return
-                        // }
-                        // else{
-                        //     window.location.href = "payment.html"
-                        // }
-                    });
+                        });
 
                         image.src = element.images;
                         name.textContent = element.name;
@@ -398,7 +385,6 @@ all.addEventListener("click",()=>{FetchTouristData()})
         {
             DestinationData.innerHTML=""
             arr.forEach((element) => {
-                //let card = getCard(item.images, item.name, item.catogary, item.package, item.price);
             
                 let card = document.createElement("div");
                 card.setAttribute("class", "card");
@@ -453,18 +439,10 @@ all.addEventListener("click",()=>{FetchTouristData()})
 
                 book_Now.textContent = "Book Now";
                 book_Now.addEventListener("click",() =>{
-                    // console.log(logggedIn)
-                // if (logggedIn == false) {
-                //     alert("Make sure you have logged in!")
                     Data.push(element);
                     localStorage.setItem("Destination-Book", JSON.stringify(Data))
                     window.location.href = "./address.html"
-                    // return
-                // }
-                // else{
-                //     window.location.href = "payment.html"
-                // }
-            });
+                });
 
                 image.src = element.images;
                 name.textContent = element.name;
@@ -473,8 +451,6 @@ all.addEventListener("click",()=>{FetchTouristData()})
                 catogary.textContent = element.catogary;
                 rating.textContent = element.Rating;
             
-
-                
                 left.append(image);
                 packageDiv.append(package,catogary)
                 EMIDiv.append(Emi,Emiprice)
@@ -488,11 +464,7 @@ all.addEventListener("click",()=>{FetchTouristData()})
  }
 
 
-
-
 //  =========================================sort====================================================================//
-
-
 
 
 let sortBtn = document.getElementById("select-tag")
@@ -532,7 +504,6 @@ sortBtn.addEventListener("change",()=>
             })
            DestinationData.innerHTML=""
            arr.forEach((element) => {
-               //let card = getCard(item.images, item.name, item.catogary, item.package, item.price);
            
                let card = document.createElement("div");
                card.setAttribute("class", "card");
@@ -554,7 +525,6 @@ sortBtn.addEventListener("change",()=>
                let package = document.createElement("p");
                let catogary = document.createElement("p");
  
-               //let ratingDiv = document.createElement("div");
                let rating = document.createElement("p");
                rating.setAttribute("id", "ratingD");
  
@@ -587,18 +557,10 @@ sortBtn.addEventListener("change",()=>
  
                book_Now.textContent = "Book Now";
                book_Now.addEventListener("click",() =>{
-                   // console.log(logggedIn)
-               // if (logggedIn == false) {
-               //     alert("Make sure you have logged in!")
                    Data.push(element);
                    localStorage.setItem("Destination-Book", JSON.stringify(Data))
-                   window.location.href = "./address.html"
-                   // return
-               // }
-               // else{
-               //     window.location.href = "payment.html"
-               // }
-           });
+                   window.location.href = "./address.html";
+                });
  
                image.src = element.images;
                name.textContent = element.name;
@@ -628,7 +590,6 @@ sortBtn.addEventListener("change",()=>
             })
            DestinationData.innerHTML=""
            arr.forEach((element) => {
-               //let card = getCard(item.images, item.name, item.catogary, item.package, item.price);
            
                let card = document.createElement("div");
                card.setAttribute("class", "card");
@@ -683,18 +644,10 @@ sortBtn.addEventListener("change",()=>
  
                book_Now.textContent = "Book Now";
                book_Now.addEventListener("click",() =>{
-                   // console.log(logggedIn)
-               // if (logggedIn == false) {
-               //     alert("Make sure you have logged in!")
                    Data.push(element);
                    localStorage.setItem("Destination-Book", JSON.stringify(Data))
-                   window.location.href = "./address.html"
-                   // return
-               // }
-               // else{
-               //     window.location.href = "payment.html"
-               // }
-           });
+                   window.location.href = "./address.html";
+                });
  
                image.src = element.images;
                name.textContent = element.name;
@@ -753,7 +706,6 @@ sortBtn.addEventListener("change",()=>
         {
             DestinationData.innerHTML=""
             arr.forEach((element) => {
-                //let card = getCard(item.images, item.name, item.catogary, item.package, item.price);
             
                 let card = document.createElement("div");
                 card.setAttribute("class", "card");
@@ -808,18 +760,10 @@ sortBtn.addEventListener("change",()=>
 
                 book_Now.textContent = "Book Now";
                 book_Now.addEventListener("click",() =>{
-                    // console.log(logggedIn)
-                // if (logggedIn == false) {
-                //     alert("Make sure you have logged in!")
                     Data.push(element);
                     localStorage.setItem("Destination-Book", JSON.stringify(Data))
                     window.location.href = "./address.html"
-                    // return
-                // }
-                // else{
-                //     window.location.href = "payment.html"
-                // }
-            });
+                });
 
                 image.src = element.images;
                 name.textContent = element.name;
@@ -828,7 +772,6 @@ sortBtn.addEventListener("change",()=>
                 catogary.textContent = element.catogary;
                 rating.textContent = element.Rating;
             
-
                 
                 left.append(image);
                 packageDiv.append(package,catogary)
@@ -839,7 +782,7 @@ sortBtn.addEventListener("change",()=>
                 card.append(left,middle,right);
                 DestinationData.append(card);
             });
-        },3000)
+        },2000)
     }
   })
 
@@ -920,18 +863,10 @@ function singleCards(id)
 
                 book_Now.textContent = "Book Now";
                 book_Now.addEventListener("click",() =>{
-                    // console.log(logggedIn)
-                // if (logggedIn == false) {
-                //     alert("Make sure you have logged in!")
                     Data.push(element);
                     localStorage.setItem("Destination-Book", JSON.stringify(Data))
                     window.location.href = "./address.html"
-                    // return
-                // }
-                // else{
-                //     window.location.href = "payment.html"
-                // }
-            });
+                });
 
                 image.src = element.images;
                 name.textContent = element.name;
@@ -940,7 +875,6 @@ function singleCards(id)
                 catogary.textContent = element.catogary;
                 rating.textContent = element.Rating;
             
-
                 
                 left.append(image);
                 packageDiv.append(package,catogary)
