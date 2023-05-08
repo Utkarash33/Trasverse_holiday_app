@@ -1,6 +1,6 @@
 let Container = document.getElementById("Destination-Data");
 let Data =  JSON.parse(localStorage.getItem("Destination-Book")) || [];
-
+let Login  = document.getElementById("LoginText")
 async function FetchData(){
     try{
         let request = await fetch("https://frail-show.onrender.com/data");
@@ -120,13 +120,12 @@ function DisplayTouristData(data){
               localStorage.setItem("Destination-Book", JSON.stringify(Data))
                window.location.href = "./address.html"
              }
-  
              else
                 {
                     alert("User has to Login")
                     window.location.href = "./userlogin.html"
                 }
-                        });
+             });
 
             image.src = element.images;
             name.textContent = element.name;
@@ -150,7 +149,7 @@ function DisplayTouristData(data){
 
 }
 // ====================================================login===============================================================//
-let Login  = document.getElementById("LoginText")
+
 
 let data=JSON.parse(localStorage.getItem("userdata"))||[];
 let x= false;
