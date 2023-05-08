@@ -34,14 +34,14 @@ function appendData(){
         td5.innerText = ele.name;
         td6.innerText = ele.catogary;
         td7.innerText = ele.package;
-        td8.innerText = ele.price;
+        td8.innerText = `Rs.${ele.price}`;
         
     });
 
-    td9.innerText = td8.innerText*td3.innerText;
-    if(td9.innerText = '0'){
-        td9.innerText = null;
-    };
+    td9.innerText = `Rs.${(+td8.innerText)*(+td3.innerText)}`;
+    // if(td9.innerText = '0'){
+    //     td9.innerText = null;
+    // };
 
     row.append(td1, td2, td3, td4, td5, td6, td7, td8, td9);
     table.append(row);
