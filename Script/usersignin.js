@@ -11,11 +11,9 @@ let phoneinp=document.getElementById("phone");
 
 let okbtn=document.getElementById("done");
 
-let userls=JSON.parse(localStorage.getItem("userdata"))||[];
-
 okbtn.addEventListener("click",function(e){
     e.preventDefault();
-    
+    let userls=JSON.parse(localStorage.getItem("userdata"))||[];
     if(nameinp.value==""||emailinp.value==""||passwordinp.value==""||cpasswordinp.value==""||phoneinp.value==""){
         alert("Please fill the all inputs.");
     }
