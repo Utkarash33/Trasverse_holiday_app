@@ -74,7 +74,7 @@ body{
     height: 40%;
     margin: auto; */
 
-    border: 10px solid pink;
+    /* border: 10px solid pink; */
 }
 /* @keyframes gradient {
 	0% {
@@ -89,33 +89,59 @@ body{
 } */
 
 #cont{
-    background-color: white;
-    border: 10px solid blue;
+    /* background-color: white; */
+    /* border: 10px solid blue; */
     width: 80%;
     height: 80%;
     /* display: flex; */
     margin: auto;
+   
     
 }
 .imgdiv{
     width: 40%;
-    border: 10px solid red;
+    /* border: 10px solid red; */
 }
 .imgdiv img{
     height: 100%;
     width: 100%;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius: 10px;
     
 }
 .infodiv{
-    width: 40%;
-    border: 10px solid green;
+    width: 60%;
+    /* border: 10px solid green; */
+    padding: 1%;
+    padding-left: 4%;
+    background-color: white;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 10px;
 }
 .card{
     border: 10px solid;
     display: flex ;
     height: 60vh;
+    justify-content: space-between;
+    border-radius: 20px;
 }
 
+marquee{
+    font-size: 400%;
+    color: white;
+    font-weight: bolder;
+}
+.booked{
+    padding: 2%;
+    margin: 7%;
+    background-color: green;
+    color: white;
+    font-size: 150%;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-weight: bolder;
+    border-radius: 15px;
+}
 
 
 

@@ -42,7 +42,14 @@
     </div>
 </nav>
 
-
+<marquee behavior="" direction="">THANK YOU HAVE A HAPPY JOURNEY &nbsp 
+   &nbsp THANK YOU HAVE A HAPPY JOURNEY
+   &nbsp THANK YOU HAVE A HAPPY JOURNEY
+   &nbsp THANK YOU HAVE A HAPPY JOURNEY
+   &nbsp THANK YOU HAVE A HAPPY JOURNEY
+   &nbsp THANK YOU HAVE A HAPPY JOURNEY
+   &nbsp THANK YOU HAVE A HAPPY JOURNEY
+</marquee>
 
 
 
@@ -75,7 +82,7 @@ console.log(data)
 
 let cont= document.getElementById("cont");
 display(data)
-function display(data){
+function display(data,item){
     cont.innerHTML=""
     data.forEach(element => {
         let card=document.createElement("div")
@@ -93,7 +100,7 @@ function display(data){
         infodiv.className="infodiv"
 
 
-        let place=document.createElement("h4")
+        let place=document.createElement("h2")
         place.textContent=element.name
         let cat=document.createElement("h5")
         cat.textContent=element.catogory
@@ -104,14 +111,53 @@ function display(data){
         let info=document.createElement("p")
         info.textContent=element.info
         let booked=document.createElement("button")
+        booked.className="booked"
         booked.textContent="BOOKED SUCCESSFULLY"
 
-        infodiv.append(place,cat,package,price,booked)
+         infodiv.append(place,cat,package,price)
         card.append(imgdiv,infodiv)
         cont.append(card)
+       
+        let book=JSON.parse(localStorage.getItem("mybookings"))||[]
+        // book.forEach(element => {
+           
+        // });
+        let n=book.pop()
+
+        let h3=document.createElement("h3")
+            h3.textContent=`Booked By:${n.name}`
+        let p=document.createElement("p")
+            p.textContent=`email:${n.email}`
+        let h5=document.createElement("h5")
+            h5.textContent=`Age:${n.age}`
+        let h4=document.createElement("h4")
+            h4.textContent=`Number of People Travelling:${n.people}`    
+        let date=document.createElement("h5")
+            date.textContent=`Date:${n.date}`  
+        let city=document.createElement("h4")
+            city.textContent=`Travelling From:${n.city}`
+        let phone=document.createElement("p")
+            phone.textContent=`Phone Number:${n.phone}`
+
+            
+            
+            
+            
+            
+            
+            infodiv.append(h3,h5,h4,city,date,p,phone,booked)
+
+
+
+
+
+      
 
     });
 }
+
+
+
 
 
 
