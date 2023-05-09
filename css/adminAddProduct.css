@@ -91,7 +91,7 @@ option {
     font-size: 25px;
 }
 
-#location {
+select {
     height: 40px;
     width: 100%;
 }
