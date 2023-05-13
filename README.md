@@ -5,7 +5,7 @@ The main motive behind creating this website is to showcase the skills that we l
 
 <img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/screencapture-127-0-0-1-5501-index-html-2023-05-08-21_05_38.png">
 
-The website has two sides: the admin and the user. To visit the admin side, users must use "Admin@Trasverse.com" as the username and "Traverse" as the password.
+The website has two sides: the admin and the user. To visit the admin side, users must use "Utkarsh@Trasverse.com" as the username and "Traverse" as the password.
 
 
 
